@@ -1,0 +1,55 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings Cafe Inventory</title>
+    <link rel="stylesheet" href="App.css">
+     <link rel="stylesheet" href=index.css">
+    <
+</head>
+<body>
+    <header>
+        <h1>Wings Cafe Inventory System</h1>
+        <nav>
+            <button onclick="showSection('dashboard')">Dashboard</button>
+            <button onclick="showSection('product-management')">Product Management</button>
+            <button onclick="showSection('user-management')">User Management</button>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard" class="hidden">
+            <h2>Dashboard</h2>
+            <div id="stock-overview"></div>
+        </section>
+        <section id="product-management" class="hidden">
+            <h2>Product Management</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="text" id="product-description" placeholder="Description">
+                <input type="text" id="product-category" placeholder="Category">
+                <input type="number" id="product-price" placeholder="Price" step="0.01" required>
+                <input type="number" id="product-quantity" placeholder="Quantity" required>
+                <button type="submit">Add/Update Product</button>
+            </form>
+            <div id="product-list"></div>
+        </section>
+        <section id="user-management" class="hidden">
+            <h2>User Management</h2>
+            <form id="user-form">
+                <input type="hidden" id="user-id">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Add/Update User</button>
+            </form>
+            <div id="user-list"></div>
+        </section>
+    </main>
+    <script src="App.js"></script>
+</body>
+
+</html>
+
+
+
